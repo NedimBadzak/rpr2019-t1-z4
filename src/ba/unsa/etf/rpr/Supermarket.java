@@ -36,6 +36,8 @@ public class Supermarket {
             if (artikli[i].getKod().equals(kod)) {
                 temp = artikli[i];
                 artikli[i] = null;
+                for(int j = i; j<artikli.length-1; j++) artikli[j] = artikli[j+1];
+                brojArtikala--;
                 break;
             }
         }
